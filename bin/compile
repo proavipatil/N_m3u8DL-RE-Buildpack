@@ -1,0 +1,12 @@
+#!/bin/sh
+
+BUILD_DIR=$1
+
+echo "-----> Downloading N_m3u8DL-RE"
+curl -L -o $BUILD_DIR/N_m3u8DL-RE.tar.gz https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v0.2.0-beta/N_m3u8DL-RE_Beta_linux-x64_20230628.tar.gz
+
+echo "-----> Extracting N_m3u8DL-RE"
+tar -xzf $BUILD_DIR/N_m3u8DL-RE.tar.gz -C $BUILD_DIR
+
+echo "-----> Making N_m3u8DL-RE executable"
+chmod +x $BUILD_DIR/N_m3u8DL-RE_Beta_linux-x64/N_m3u8DL-RE
